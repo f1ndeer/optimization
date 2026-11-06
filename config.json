@@ -1,0 +1,14 @@
+{
+    "ui": {
+        "appearance": "Dark",
+        "bg_color": "#090a0f",
+        "card_color": "#12151f",
+        "accent_color": "#e63946",
+        "accent_hover": "#b8232f",
+        "secondary_color": "#232838",
+        "success_color": "#00e676",
+        "warning_color": "#ffab00",
+        "text_color": "#f1faee",
+        "subtext_color": "#8d99ae"
+    }
+}

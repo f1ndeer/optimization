@@ -1,0 +1,159 @@
+[
+    {
+        "name": "SysMain",
+        "title": "SysMain (Superfetch)",
+        "description": "Фоновая предзагрузка программ в ОЗУ. На быстрых SSD вызывает лишние обращения к диску и микрофризы в играх.",
+        "recommended": true
+    },
+    {
+        "name": "WSearch",
+        "title": "Windows Search (Индексация)",
+        "description": "Постоянно индексирует файлы в фоне. Поиск в меню «Пуск» продолжит работать без индексации.",
+        "recommended": true
+    },
+    {
+        "name": "DiagTrack",
+        "title": "Функциональные возможности для подключённых пользователей и телеметрия",
+        "description": "Главная служба сбора диагностических данных и отправки отчётов активности в Microsoft.",
+        "recommended": true
+    },
+    {
+        "name": "dmwappushservice",
+        "title": "Служба маршрутизации push-сообщений WAP",
+        "description": "Вспомогательная служба телеметрии, работающая в связке с DiagTrack.",
+        "recommended": true
+    },
+    {
+        "name": "WerSvc",
+        "title": "Служба регистрации ошибок Windows (WerSvc)",
+        "description": "Собирает дампы и отправляет отчёты о сбоях программ, нагружая диск в момент вылета.",
+        "recommended": true
+    },
+    {
+        "name": "Spooler",
+        "title": "Диспетчер печати (Print Spooler)",
+        "description": "Фоновая очередь печати. Безопасно останавливать на время игры, если принтер не используется.",
+        "recommended": true
+    },
+    {
+        "name": "MapsBroker",
+        "title": "Диспетчер скачанных карт (MapsBroker)",
+        "description": "Фоновое обновление офлайн-карт Bing. В играх и повседневной работе не требуется.",
+        "recommended": true
+    },
+    {
+        "name": "lfsvc",
+        "title": "Служба геолокации (Geolocation Service)",
+        "description": "Отслеживает текущее местоположение компьютера для магазинных приложений.",
+        "recommended": true
+    },
+    {
+        "name": "RetailDemo",
+        "title": "Служба демонстрации магазина (RetailDemo)",
+        "description": "Режим витринного образца для магазинов электроники. Домашнему ПК не нужна.",
+        "recommended": true
+    },
+    {
+        "name": "Fax",
+        "title": "Служба факсов (Fax)",
+        "description": "Устаревшая служба отправки и приёма факсимильных сообщений.",
+        "recommended": true
+    },
+    {
+        "name": "RemoteRegistry",
+        "title": "Удалённый реестр (RemoteRegistry)",
+        "description": "Позволяет удалённым пользователям изменять реестр по сети. Отключение повышает безопасность.",
+        "recommended": true
+    },
+    {
+        "name": "wisvc",
+        "title": "Служба программы предварительной оценки Windows Insider",
+        "description": "Нужна исключительно тестерам бета-сборок Windows Insider.",
+        "recommended": true
+    },
+    {
+        "name": "WMPNetworkSvc",
+        "title": "Служба общих сетевых ресурсов Windows Media Player",
+        "description": "Транслирует медиабиблиотеку проигрывателя Windows Media по локальной сети.",
+        "recommended": true
+    },
+    {
+        "name": "PhoneSvc",
+        "title": "Телефонная служба (Phone Service)",
+        "description": "Управляет состоянием телефонии на устройстве. На настольных ПК и ноутбуках не используется.",
+        "recommended": true
+    },
+    {
+        "name": "WalletService",
+        "title": "Служба бумажника (WalletService)",
+        "description": "Устаревшая служба хранения платёжных данных для Microsoft Edge/Store.",
+        "recommended": true
+    },
+    {
+        "name": "diagsvc",
+        "title": "Служба выполнения диагностики (Diagnostic Execution Service)",
+        "description": "Выполняет диагностические сценарии для поддержки Microsoft.",
+        "recommended": true
+    },
+    {
+        "name": "DPS",
+        "title": "Служба политики диагностики (DPS)",
+        "description": "Фоновое обнаружение неполадок компонентов Windows. Часто грузит ЦП при сетевых запросах.",
+        "recommended": false
+    },
+    {
+        "name": "PcaSvc",
+        "title": "Служба помощника по совместимости программ (PcaSvc)",
+        "description": "Отслеживает запускаемые игры и программы. Отключение ускоряет старт старых игр.",
+        "recommended": false
+    },
+    {
+        "name": "SysMain_Sensor",
+        "name": "SensorService",
+        "title": "Служба датчиков (SensorService)",
+        "description": "Управляет датчиками освещённости и гироскопом планшетов. На стационарном ПК не нужна.",
+        "recommended": true
+    },
+    {
+        "name": "ScDeviceEnum",
+        "title": "Служба перечисления устройств чтения смарт-карт",
+        "description": "Нужна только для корпоративных считывателей смарт-карт.",
+        "recommended": true
+    },
+    {
+        "name": "SCardSvr",
+        "title": "Смарт-карта (Smart Card)",
+        "description": "Управление доступом к считывателям смарт-карт. Обычному игровому ПК не нужна.",
+        "recommended": true
+    },
+    {
+        "name": "stisvc",
+        "title": "Служба загрузки изображений Windows (WIA)",
+        "description": "Нужна только при подключении проводного сканера или старой фотокамеры.",
+        "recommended": false
+    },
+    {
+        "name": "TabletInputService",
+        "title": "Служба сенсорной клавиатуры и панели рукописного ввода",
+        "description": "Для сенсорных экранов и стилусов. Внимание: может влиять на панель эмодзи (Win + .).",
+        "recommended": false
+    },
+    {
+        "name": "XblGameSave",
+        "title": "Сетевая служба сохранений игр Xbox Live",
+        "description": "Облачные сохранения Xbox. Отключайте, если играете только в Steam, Epic Games или Battle.net.",
+        "recommended": false
+    },
+    {
+        "name": "XboxNetApiSvc",
+        "title": "Сетевая служба Xbox Live",
+        "description": "Сетевой стек Xbox Live. Отключайте, если не пользуетесь Game Pass и приложением Xbox.",
+        "recommended": false
+    },
+    {
+        "name": "bthserv",
+        "title": "Служба поддержки Bluetooth (bthserv)",
+        "description": "Останавливайте ТОЛЬКО если не используете Bluetooth-наушники, геймпад или мышь.",
+        "recommended": false
+    }
+]

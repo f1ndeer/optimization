@@ -1,0 +1,498 @@
+[
+    {
+        "id": "game_dvr",
+        "title": "Отключение Xbox GameDVR, Game Bar и фоновой записи",
+        "description": "Отключает фоновый захват экрана Windows, повышает FPS и убирает инпут-лаг в полноэкранных играх.",
+        "category": "Игры и FPS",
+        "recommended": true,
+        "profile": ["gaming", "max"]
+    },
+    {
+        "id": "mmcss_gaming",
+        "title": "Приоритет ЦП и GPU для игр (MMCSS)",
+        "description": "SystemResponsiveness = 0, GPU Priority = 8, Priority = 6, Scheduling Category = High для игровых потоков.",
+        "category": "Игры и FPS",
+        "recommended": true,
+        "profile": ["gaming", "max"]
+    },
+    {
+        "id": "game_mode",
+        "title": "Принудительное включение Игрового режима Windows",
+        "description": "Windows выделяет ядра ЦП активной игре и блокирует установку драйверов/обновлений во время сессии.",
+        "category": "Игры и FPS",
+        "recommended": true,
+        "profile": ["gaming", "max", "laptop"]
+    },
+    {
+        "id": "win32_priority",
+        "title": "Приоритет активного окна (Win32PrioritySeparation = 0x26)",
+        "description": "Короткие фиксированные кванты времени ЦП с максимальным бустом для активной игры — снижает задержку ввода.",
+        "category": "Игры и FPS",
+        "recommended": true,
+        "profile": ["gaming", "max"]
+    },
+    {
+        "id": "power_throttling",
+        "title": "Отключение Power Throttling (троттлинга питания ЦП)",
+        "description": "Запрещает Windows принудительно снижать частоты ЦП для фоновых задач (Discord, OBS, голосовые чаты).",
+        "category": "Игры и FPS",
+        "recommended": true,
+        "reboot": true,
+        "profile": ["gaming", "max"]
+    },
+    {
+        "id": "global_timer_resolution",
+        "title": "Глобальный таймер высокой точности (GlobalTimerResolutionRequests)",
+        "description": "Возвращает глобальное применение таймера 0.5 мс в Windows 11 (22H2–24H2) для минимального фреймтайма.",
+        "category": "Игры и FPS",
+        "recommended": true,
+        "reboot": true,
+        "profile": ["gaming", "max"]
+    },
+    {
+        "id": "windowed_opt",
+        "title": "Оптимизация для игр в оконном режиме (DXGI Flip Model)",
+        "description": "Активирует современную модель презентации кадров в DX10/DX11-играх без рамки (уровень задержки эксклюзивного экрана).",
+        "category": "Игры и FPS",
+        "recommended": true,
+        "profile": ["gaming", "max", "laptop"]
+    },
+    {
+        "id": "fullscreen_opt",
+        "title": "Отключение оптимизации во весь экран (FSO)",
+        "description": "Возвращает классический эксклюзивный полноэкранный режим для соревновательных шутеров (CS2, Valorant).",
+        "category": "Игры и FPS",
+        "recommended": false,
+        "profile": ["max"]
+    },
+    {
+        "id": "hags",
+        "title": "Аппаратное планирование GPU (HAGS)",
+        "description": "Переносит управление видеопамятью на сам видеочип. Обязательно для DLSS 3 Frame Generation.",
+        "category": "Игры и FPS",
+        "recommended": false,
+        "reboot": true,
+        "profile": ["max"]
+    },
+    {
+        "id": "mpo_disable",
+        "title": "Отключение Multiplane Overlay (MPO)",
+        "description": "Устраняет микрофризы, чёрные экраны и мерцания при сворачивании игр (Alt+Tab) на видеокартах NVIDIA и AMD.",
+        "category": "Игры и FPS",
+        "recommended": true,
+        "reboot": true,
+        "profile": ["gaming", "max"]
+    },
+    {
+        "id": "fth_disable",
+        "title": "Отключение Fault Tolerant Heap (отладочная куча FTH)",
+        "description": "Не даёт Windows тайно переводить игры в медленный режим отладки памяти после единичного вылета.",
+        "category": "Игры и FPS",
+        "recommended": true,
+        "profile": ["gaming", "max"]
+    },
+    {
+        "id": "mouse_accel",
+        "title": "Отключение акселерации мыши (честный аим 1:1)",
+        "description": "Отключает кривую ускорения курсора Windows — расстояние на коврике всегда строго пропорционально повороту прицела.",
+        "category": "Игры и FPS",
+        "recommended": false,
+        "profile": ["max"]
+    },
+    {
+        "id": "keyboard_response",
+        "title": "Минимальная задержка повтора клавиш клавиатуры",
+        "description": "Устанавливает KeyboardDelay = 0 и KeyboardSpeed = 31 для мгновенного отклика клавиатуры.",
+        "category": "Игры и FPS",
+        "recommended": true,
+        "profile": ["gaming", "max"]
+    },
+    {
+        "id": "sticky_keys",
+        "title": "Отключение залипания и фильтрации клавиш (5×Shift)",
+        "description": "Запрещает всплывающее окно «Залипание клавиш», которое сворачивает игру при частом нажатии Shift или Ctrl.",
+        "category": "Игры и FPS",
+        "recommended": true,
+        "profile": ["gaming", "max", "laptop"]
+    },
+
+    {
+        "id": "network_throttling",
+        "title": "Отключение сетевого троттлинга (NetworkThrottlingIndex)",
+        "description": "Снимает встроенный лимит Windows в 10 пакетов/мс при одновременной работе звука и сетевой игры.",
+        "category": "Сеть и Пинг",
+        "recommended": true,
+        "profile": ["gaming", "max"]
+    },
+    {
+        "id": "nagle",
+        "title": "Отключение алгоритма Нейгла (TCPNoDelay + TcpAckFrequency)",
+        "description": "Отправляет игровые TCP-пакеты немедленно без буферизации и ожидания подтверждений.",
+        "category": "Сеть и Пинг",
+        "recommended": true,
+        "reboot": true,
+        "profile": ["gaming", "max"]
+    },
+    {
+        "id": "dns_priority",
+        "title": "Максимальный приоритет локального кэша и DNS",
+        "description": "Ускоряет разрешение доменных имён игровых серверов за счёт приоритета локального кэша и DNS над NetBT.",
+        "category": "Сеть и Пинг",
+        "recommended": true,
+        "reboot": true,
+        "profile": ["gaming", "max", "laptop"]
+    },
+    {
+        "id": "delivery_optimization",
+        "title": "Отключение P2P-раздачи обновлений (Delivery Optimization)",
+        "description": "Запрещает Windows использовать ваш интернет-канал для раздачи обновлений другим компьютерам в сети.",
+        "category": "Сеть и Пинг",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy", "laptop"]
+    },
+    {
+        "id": "tcp_params",
+        "title": "Расширение пула портов TCP/IP (MaxUserPort = 65534)",
+        "description": "Увеличивает число доступных эфемерных портов и сокращает время освобождения сокетов (TcpTimedWaitDelay = 30).",
+        "category": "Сеть и Пинг",
+        "recommended": true,
+        "reboot": true,
+        "profile": ["gaming", "max"]
+    },
+    {
+        "id": "llmnr_disable",
+        "title": "Отключение многоадресного поиска LLMNR",
+        "description": "Убирает задержки при обращении к несуществующим сетевым узлам и повышает сетевую безопасность.",
+        "category": "Сеть и Пинг",
+        "recommended": false,
+        "profile": ["max", "privacy"]
+    },
+
+    {
+        "id": "power_plan",
+        "title": "Схема питания «Высокая производительность» + анти-парковка ядер",
+        "description": "Активирует максимальный профиль питания, отключает парковку ядер ЦП и удерживает частоту процессора на 100%.",
+        "category": "Система",
+        "recommended": true,
+        "profile": ["gaming", "max"]
+    },
+    {
+        "id": "usb_suspend",
+        "title": "Запрет энергосбережения USB-портов (USB Selective Suspend)",
+        "description": "Предотвращает микро-отключения и задержки игровой мыши, клавиатуры и ЦАП/гарнитуры.",
+        "category": "Система",
+        "recommended": true,
+        "profile": ["gaming", "max"]
+    },
+    {
+        "id": "svchost_split",
+        "title": "Оптимизация группировки процессов svchost.exe под объём ОЗУ",
+        "description": "Устанавливает SvcHostSplitThresholdInKB по размеру вашей оперативной памяти — сокращает число процессов в системе.",
+        "category": "Система",
+        "recommended": true,
+        "reboot": true,
+        "profile": ["gaming", "max", "laptop"]
+    },
+    {
+        "id": "startup_delay",
+        "title": "Отключение искусственной задержки автозагрузки",
+        "description": "Убирает 10-секундную паузу Windows перед запуском программ после входа на рабочий стол.",
+        "category": "Система",
+        "recommended": true,
+        "profile": ["gaming", "max", "laptop"]
+    },
+    {
+        "id": "ntfs_last_access",
+        "title": "Отключение обновления метки последнего доступа NTFS",
+        "description": "Снижает фоновую нагрузку на SSD при чтении тысяч игровых файлов и продлевает ресурс накопителя.",
+        "category": "Система",
+        "recommended": true,
+        "reboot": true,
+        "profile": ["gaming", "max", "laptop"]
+    },
+    {
+        "id": "ntfs_8dot3",
+        "title": "Отключение создания устаревших коротких имён NTFS (8.3)",
+        "description": "Ускоряет создание и распаковку папок с большим числом мелких файлов.",
+        "category": "Система",
+        "recommended": true,
+        "reboot": true,
+        "profile": ["gaming", "max"]
+    },
+    {
+        "id": "fast_shutdown",
+        "title": "Ускоренное выключение компьютера (WaitToKillService = 2000)",
+        "description": "Сокращает ожидание остановки фоновых служб при выключении или перезагрузке с 5 до 2 секунд.",
+        "category": "Система",
+        "recommended": true,
+        "profile": ["gaming", "max", "laptop"]
+    },
+    {
+        "id": "hung_apps",
+        "title": "Быстрое завершение зависших приложений",
+        "description": "Уменьшает таймаут ожидания отклика зависших окон (HungAppTimeout = 2000 мс).",
+        "category": "Система",
+        "recommended": true,
+        "profile": ["gaming", "max", "laptop"]
+    },
+    {
+        "id": "paging_executive",
+        "title": "Запрет выгрузки ядра Windows и драйверов в файл подкачки",
+        "description": "Держит код ядра и драйверов в быстрой оперативной памяти (DisablePagingExecutive = 1).",
+        "category": "Система",
+        "recommended": true,
+        "reboot": true,
+        "profile": ["gaming", "max"]
+    },
+    {
+        "id": "update_no_reboot",
+        "title": "Запрет принудительной перезагрузки после обновлений",
+        "description": "Windows никогда не перезагрузит ПК сама, пока вы находитесь в системе или играете.",
+        "category": "Система",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy", "laptop"]
+    },
+    {
+        "id": "auto_maintenance",
+        "title": "Отключение фонового автоматического обслуживания",
+        "description": "Предотвращает внезапный запуск фонового сканирования и обслуживания дисков во время работы.",
+        "category": "Система",
+        "recommended": false,
+        "profile": ["max"]
+    },
+    {
+        "id": "fast_startup",
+        "title": "Отключение гибридного «Быстрого запуска» (Hiberboot)",
+        "description": "Обеспечивает полноценную чистую перезагрузку ядра и драйверов видеокарты при каждом включении ПК.",
+        "category": "Система",
+        "recommended": false,
+        "profile": ["max"]
+    },
+    {
+        "id": "disable_hibernation",
+        "title": "Полное отключение гибернации (освобождение 6–16 ГБ на SSD)",
+        "description": "Выполняет powercfg -h off и удаляет системный файл hiberfil.sys с диска C:.",
+        "category": "Система",
+        "recommended": false,
+        "profile": ["max"]
+    },
+    {
+        "id": "error_reporting",
+        "title": "Отключение сбора дампов Windows Error Reporting",
+        "description": "Не тратит ресурсы диска и сети на упаковку отчётов при закрытии программ.",
+        "category": "Система",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy", "laptop"]
+    },
+    {
+        "id": "remote_assistance",
+        "title": "Отключение службы удалённого помощника Windows",
+        "description": "Запрещает входящие подключения удалённой помощи к вашему компьютеру.",
+        "category": "Система",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy"]
+    },
+
+    {
+        "id": "telemetry",
+        "title": "Ограничение телеметрии и диагностики Windows",
+        "description": "Устанавливает политику AllowTelemetry = 0 и отключает всплывающие опросы обратной связи.",
+        "category": "Приватность",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy", "laptop"]
+    },
+    {
+        "id": "advertising_id",
+        "title": "Отключение рекламного идентификатора (Advertising ID)",
+        "description": "Запрещает приложениям отслеживать ваши предпочтения для показа таргетированной рекламы.",
+        "category": "Приватность",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy", "laptop"]
+    },
+    {
+        "id": "tailored_experiences",
+        "title": "Отключение персонализированных рекомендаций Microsoft",
+        "description": "Блокирует показ маркетинговых уведомлений на основе диагностических данных.",
+        "category": "Приватность",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy", "laptop"]
+    },
+    {
+        "id": "activity_history",
+        "title": "Отключение журнала активности и синхронизации истории",
+        "description": "Прекращает сбор истории запускаемых файлов и приложений для отправки в облако.",
+        "category": "Приватность",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy", "laptop"]
+    },
+    {
+        "id": "suggestions_ads",
+        "title": "Блокировка рекламы в «Пуске» и тихой установки промо-игр",
+        "description": "Отключает рекламные баннеры, советы на экране блокировки и скрытую скачку ненужных приложений.",
+        "category": "Приватность",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy", "laptop"]
+    },
+    {
+        "id": "start_tracking",
+        "title": "Запрет отслеживания запуска программ в меню «Пуск»",
+        "description": "Windows перестаёт вести статистику частоты запуска программ.",
+        "category": "Приватность",
+        "recommended": true,
+        "profile": ["max", "privacy"]
+    },
+    {
+        "id": "input_personalization",
+        "title": "Запрет сбора набираемого текста и голосовых образцов",
+        "description": "Отключает фоновую телеметрию клавиатурного ввода (Ink & Text Collection).",
+        "category": "Приватность",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy", "laptop"]
+    },
+    {
+        "id": "bing_search",
+        "title": "Отключение веб-поиска Bing в меню «Пуск»",
+        "description": "Поиск в «Пуске» работает мгновенно, ищет только локальные файлы и не грузит процессы SearchHost.",
+        "category": "Приватность",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy", "laptop"]
+    },
+    {
+        "id": "cortana",
+        "title": "Отключение голосового помощника Cortana",
+        "description": "Деактивирует фоновые политики Cortana в поиске Windows.",
+        "category": "Приватность",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy", "laptop"]
+    },
+    {
+        "id": "copilot",
+        "title": "Отключение ИИ-ассистента Windows Copilot",
+        "description": "Убирает фоновый процесс Copilot и кнопку на панели задач, экономя ОЗУ.",
+        "category": "Приватность",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy"]
+    },
+    {
+        "id": "widgets",
+        "title": "Отключение панели Виджетов и Новостей (WebView2)",
+        "description": "Освобождает 200–450 МБ оперативной памяти за счёт выгрузки фоновых процессов Widgets.exe.",
+        "category": "Приватность",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy", "laptop"]
+    },
+    {
+        "id": "edge_background",
+        "title": "Запрет фоновой работы и Startup Boost браузера Edge",
+        "description": "Не даёт процессам msedge.exe висеть в оперативной памяти после закрытия браузера.",
+        "category": "Приватность",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy", "laptop"]
+    },
+    {
+        "id": "background_apps",
+        "title": "Запрет фоновой активности магазинных UWP-приложений",
+        "description": "Блокирует работу стандартных приложений Microsoft Store в фоне во время игры.",
+        "category": "Приватность",
+        "recommended": false,
+        "profile": ["max", "privacy"]
+    },
+    {
+        "id": "location",
+        "title": "Отключение фоновой службы геолокации",
+        "description": "Запрещает системным и магазинным приложениям запрашивать ваше местоположение.",
+        "category": "Приватность",
+        "recommended": false,
+        "profile": ["max", "privacy"]
+    },
+
+    {
+        "id": "menu_delay",
+        "title": "Мгновенное открытие контекстных меню (MenuShowDelay = 0)",
+        "description": "Убирает стандартную 400-миллисекундную задержку отрисовки подменю Windows.",
+        "category": "Интерфейс",
+        "recommended": true,
+        "profile": ["gaming", "max", "laptop"]
+    },
+    {
+        "id": "mouse_hover",
+        "title": "Быстрый отклик элементов при наведении мыши (10 мс)",
+        "description": "Сокращает задержку срабатывания hover-подсказок Проводника с 400 до 10 мс.",
+        "category": "Интерфейс",
+        "recommended": true,
+        "profile": ["gaming", "max"]
+    },
+    {
+        "id": "disable_transparency",
+        "title": "Отключение эффектов прозрачности Acrylic и Mica",
+        "description": "Разгружает композитор DWM.exe и видеопамять, делая интерфейс строгим и отзывчивым.",
+        "category": "Интерфейс",
+        "recommended": true,
+        "profile": ["gaming", "max", "laptop"]
+    },
+    {
+        "id": "disable_animations",
+        "title": "Отключение анимаций сворачивания окон и панели задач",
+        "description": "Переключение между игрой и рабочим столом (Alt+Tab) происходит мгновенно.",
+        "category": "Интерфейс",
+        "recommended": false,
+        "reboot": true,
+        "profile": ["max"]
+    },
+    {
+        "id": "dark_theme",
+        "title": "Строгая тёмная тема Windows и приложений",
+        "description": "Включает тёмный режим интерфейса ОС (идеально сочетается с чёрными обоями OLED Black).",
+        "category": "Интерфейс",
+        "recommended": true,
+        "profile": ["gaming", "max", "laptop"]
+    },
+    {
+        "id": "classic_menu",
+        "title": "Классическое полное контекстное меню ПКМ в Windows 11",
+        "description": "Возвращает удобное полное меню правой кнопки мыши без лишнего клика «Показать дополнительные параметры».",
+        "category": "Интерфейс",
+        "recommended": false,
+        "profile": ["max"]
+    },
+    {
+        "id": "show_extensions",
+        "title": "Показ расширений всех типов файлов (.exe, .dll, .cfg)",
+        "description": "Позволяет видеть реальные расширения файлов для удобной настройки конфигов игр и защиты от вирусов.",
+        "category": "Интерфейс",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy", "laptop"]
+    },
+    {
+        "id": "explorer_this_pc",
+        "title": "Открытие Проводника сразу на разделе «Этот компьютер»",
+        "description": "Проводник открывает список дисков вместо медленной ленты «Главная / Быстрый доступ».",
+        "category": "Интерфейс",
+        "recommended": true,
+        "profile": ["gaming", "max", "laptop"]
+    },
+    {
+        "id": "aero_shake",
+        "title": "Отключение функции встряхивания окна (Aero Shake)",
+        "description": "Быстрое движение окном мыши больше не будет случайно сворачивать все остальные открытые программы.",
+        "category": "Интерфейс",
+        "recommended": true,
+        "profile": ["gaming", "max", "laptop"]
+    },
+    {
+        "id": "taskbar_end_task",
+        "title": "Кнопка «Завершить задачу» в меню ПКМ на панели задач",
+        "description": "Позволяет мгновенно закрыть зависшую игру или программу прямо с панели задач без Диспетчера задач.",
+        "category": "Интерфейс",
+        "recommended": true,
+        "profile": ["gaming", "max", "laptop"]
+    },
+    {
+        "id": "sync_provider_ads",
+        "title": "Отключение рекламных баннеров OneDrive в Проводнике",
+        "description": "Убирает навязчивые уведомления о покупке облачного хранилища в окнах папок.",
+        "category": "Интерфейс",
+        "recommended": true,
+        "profile": ["gaming", "max", "privacy", "laptop"]
+    }
+]
